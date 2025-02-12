@@ -1,0 +1,267 @@
+:root {
+  --header-height: 80px;
+  --green: rgb(0, 112, 19);
+  --light-yellow: rgb(250, 244, 182);
+  --avocado: rgb(208, 217, 154);
+  --bright-avocado: rgb(245, 255, 184);
+  --dark-green: rgb(149, 166, 124);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--avocado);
+  font-family: Montserrat, Verdana, sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  min-height: var(--header-height);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: var(--light-yellow);
+}
+.logo {
+  height: var(--header-height);
+}
+#header-img {
+  height: var(--header-height);
+  position: absolute;
+  top: 2px;
+  left: 10px;
+}
+#header-title {
+  position: absolute;
+  top: 10px;
+  left: 94px;
+  color: var(--green);
+  font-size: 30px;
+  font-family: "Playwrite VN";
+}
+#nav-bar {
+  height: var(--header-height);
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 50px;
+}
+.nav-link {
+  color: var(--green);
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "Lilita One";
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+h1, h2, h3 {
+  font-family: "Lilita One";
+  letter-spacing: 1.2px;
+}
+
+main {
+  margin-top: var(--header-height);
+}
+.headline {
+  text-align: center;
+  padding-top: 80px;
+}
+form {
+  margin: 20px auto;
+}
+form input[type="email"] {
+  max-width: 100%;
+  width: 400px;
+  font-size: 16px;
+  padding: 4px;
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+}
+form input[type="submit"] {
+  width: 290px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+form input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+
+#features {
+  margin: 80px 0;
+}
+#features h3 {
+  color: var(--green);
+}
+#features h2 {
+  text-align: center;
+}
+.green {
+  color: var(--green);
+  font-size: 140%;
+}
+.point {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+}
+.graphic {
+  font-size: 60px;
+}
+
+#product {
+  background-color: var(--dark-green);
+  padding: 40px 0;
+  text-align: center;
+}
+#product iframe {
+  width: 800px;
+  height: 450px;
+  max-width: 100%;
+}
+
+#prices {
+  margin: 60px auto;
+  padding: 20px;
+}
+#prices h2 {
+  color: black;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: "Playwrite VN", cursive;
+}
+#prices .options {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 80px;
+  text-align: center;
+}
+.option {
+  background-color: var(--bright-avocado);
+  height: 230px;
+  padding: 42px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: white;
+}
+.price {
+  font-size: 30px;
+  font-family: "Lilita One", sans-serif;
+}
+.quantity {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+footer {
+  background-color: var(--dark-green);
+  color: black;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+#footer-links {
+  display: flex;
+  gap: 16px;
+}
+footer a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+/* Header Responsive */
+@media screen and (max-width: 780px) {
+  :root {
+    --header-height: 60px;
+  }
+  #header-title {
+    font-size: 24px;
+    top: 4px;
+    left: 74px;
+  }
+  #nav-bar {
+    padding: 0 30px;
+  }
+  .nav-link {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 633px) {
+  header {
+    flex-direction: column;
+  }
+  #nav-bar {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 384px) {
+  :root {
+    --header-height: 160px;
+  }
+  header {
+    height: calc(var(--header-height) + 40px);
+    justify-content: flex-start
+  }
+  #header-img, #nav-bar, .logo {
+    height: calc(var(--header-height) / 2);
+  }
+  #header-title {
+    font-size: 20px;
+    top: 20px;
+    left: 90px;
+  }
+  #nav-bar a {
+    text-align: center;
+    font-size: 24px;
+  }
+  #nav-bar {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+}
+
+/* Prices Eggs Responsive */
+@media screen and (max-width: 680px) {
+  #prices .options {
+    flex-direction: column;
+    align-items: center;
+  }
+  .option {
+    width: 200px;
+  }
+}
+
+
+/* Footer Responsive */
+@media screen and (max-width: 688px) {
+  footer {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 378px) {
+  #footer-links {
+    flex-direction: column;
+  }
+}
