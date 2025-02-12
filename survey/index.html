@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Townsville Resident Satisfaction Survey</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="bg-wash">
+      <div class="bg-vignette">
+        <main class="survey">
+          <h1 id="title">Townsville Resident Survey</h1>
+          <p id="description">The Bureau of Resident Relations invites you to share your opinions and thoughts. In order to maximize the accuracy of our research, please answer the questions as truthfully as possible. Your responses will not be linked with your individual identity.</p>
+
+          <form id="survey-form" method="post">
+            <fieldset>
+              <legend>Personal Information</legend>
+              <label id="name-label">Name
+                <input required
+                       type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your full name"
+                />
+              </label>
+              <label id="email-label">Email
+                <input required
+                       type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter a valid email address"
+                />
+              </label>
+              
+            </fieldset>
+
+            <fieldset>
+              <legend>Your Background</legend>
+              <div class="form-row">
+                <label id="number-label">Age
+                  <input required
+                         type="number"
+                         min="0"
+                         max="140"
+                         id="number"
+                         name="age"
+                         placeholder="0 - 140"
+                  />
+                </label>
+                <label for="zipcode"> ZIP Code
+                  <input required
+                        type="text"
+                        id="zipcode"
+                        name="zipcode"
+                        placeholder="123 45"
+                  />
+                </label>
+              </div>
+              <div class="select-row">
+                <label for="dropdown">Sex
+                  <select required id="dropdown" name="sex">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="unspecified">Prefer not to respond</option>
+                  </select>
+                </label>
+              </div>
+              <div class="select-row">
+                <label for="ethnicity">Race / Ethnic Background
+                  <select required id="ethnicity" name="ethnicity">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="charese">Charese</option>
+                    <option value="tahini">Brown / Tahini Townspeople</option>
+                    <option value="west-islander">West Islander</option>
+                    <option value="dachtylese">Dachtylese</option>
+                    <option value="red-hawaiian">Red Hawaiian</option>
+                    <option value="other">Other</option>
+                    <option value="unspecified">Prefer not to respond</option>
+                  </select>
+                </label>
+              </div>
+              <p id="how-many-live-together">How many other people do you live together with?</p>
+              <div class="form-row">
+                <label for="household-family">Family members
+                  <input required
+                        type="number"
+                        min="0"
+                        max="100"
+                        id="household-family"
+                        name="household-family"
+                        placeholder="0 - 100"
+                  />
+                </label>
+                <label for="household-roommates">Non-family members
+                  <input required
+                        type="number"
+                        min="0"
+                        max="100"
+                        id="household-roommates"
+                        name="household-roommates"
+                        placeholder="0 - 100"
+                  />
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Economy</legend>
+              <div class="select-row">
+                <label for="occupation">Which option best describes your occupation?
+                  <select required id="occupation" name="occupation">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="full-employed">Full-time employee</option>
+                    <option value="part-employed">Part-time employee</option>
+                    <option value="self-employed">Self-employed</option>
+                    <option value="homemaker">Homemaker</option>
+                    <option value="student">Student</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+              </div>
+              <div class="select-row">
+                <label for="field">Primary Field of Work or Study
+                  <select required id="field" name="field">
+                    <option selected disabled valuee="">Choose...</option>
+                    <option value="hospitality">Hospitality and Service</option>
+                    <option value="construction">Construction, Maintenance and Engineering</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="police">Law Enforcement</option>
+                    <option value="legal">Legal Services</option>
+                    <option value="science">Science and Research</option>
+                    <option value="military">Military</option>
+                    <option value="education">Education</option>
+                    <option value="tech">IT and Software</option>
+                    <option value="media">Design, Media and Publishing</option>
+                    <option value="entertainment">Entertainment and Creative Industries</option>
+                    <option value="manufacturing">Manufacturing and Craftwork</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+              </div>
+              <div class="select-row">
+                <label for="income">What is your monthly income?
+                  <select required id="income" name="income">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="income-0">Less than &#1508;1,000</option>
+                    <option value="income-1">&#1508;1,000 - &#1508;10,000</option>
+                    <option value="income-2">&#1508;10,000 - &#1508;20,000</option>
+                    <option value="income-3">&#1508;20,000 - &#1508;30,000</option>
+                    <option value="income-4">&#1508;30,000 - &#1508;40,000</option>
+                    <option value="income-5">&#1508;40,000 - &#1508;50,000</option>
+                    <option value="income-6">&#1508;50,000 - &#1508;80,000</option>
+                    <option value="income-7">&#1508;80,000 - &#1508;120,000</option>
+                    <option value="income-8">More than &#1508;120,000</option>
+                  </select>
+                </label>
+              </div>
+              <p id="which-community-services">Which of the following community services have you used in the past year? (Check all that apply)</p>
+              <div class="checkboxes">
+                <label for="services-healthcare">
+                  <input type="checkbox"
+                         id="services-healthcare"
+                         name="services"
+                         value="healthcare"
+                  /> Public Hospitals and Clinics
+                </label>
+                <label for="services-police">
+                  <input type="checkbox"
+                         id="services-police"
+                         name="services"
+                         value="police"
+                  /> Police Hotlines
+                </label>
+                <label for="services-emergency">
+                  <input type="checkbox"
+                         id="services-emergency"
+                         name="services"
+                         value="emergency"
+                  /> Emergency Services
+                </label>
+                <label for="services-primary-school">
+                  <input type="checkbox"
+                        id="services-primary-school"
+                        name="services"
+                        value="primary-school"
+                  /> Primary Education (Grades 1-5)
+                </label>
+                <label for="services-middle-school">
+                  <input type="checkbox"
+                        id="services-middle-school"
+                        name="services"
+                        value="middle-school"
+                  /> Middle Education (Grades 6-8)
+                </label>
+
+                <label for="services-high-school">
+                  <input type="checkbox"
+                        id="services-high-school"
+                        name="services"
+                        value="high-school"
+                  /> High School (Grades 9-12)
+                </label>
+
+                <label for="services-university">
+                  <input type="checkbox"
+                        id="services-university"
+                        name="services"
+                        value="university"
+                  /> Townsville City University
+                </label>
+                <label for="services-food">
+                  <input type="checkbox"
+                         id="services-food"
+                         name="services"
+                         value="food"
+                  /> Emergency Food Bank
+                </label>
+                <label for="services-unemployment">
+                  <input type="checkbox"
+                         id="services-unemployment"
+                         name="services"
+                         value="unemployment"
+                  /> Unemployment Register
+                </label>
+                <label for="services-domestic">
+                  <input type="checkbox"
+                         id="services-domestic"
+                         name="services"
+                         value="domestic"
+                  /> Family Dispute & Violence Center
+                </label>
+                <label for="services-sports">
+                  <input type="checkbox"
+                         id="services-sports"
+                         name="services"
+                         value="sports"
+                  /> Community Afterwork Sports Center
+                </label>
+                <label for="services-nightbus">
+                  <input type="checkbox"
+                         id="services-nightbus"
+                         name="services"
+                         value="nightbus"
+                  /> Night Bus
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Questions</legend>
+              <p id="questions">For the following 10 questions, please choose the option that best reflects your thoughts.</p>
+              <table class="questions">
+                <tr>
+                  <th><div>Strongly Agree</div></th>
+                  <th><div>Agree</div></th>
+                  <th><div>Neutral</div></th>
+                  <th><div>Disagree</div></th>
+                  <th><div>Strongly Disagree</div></th>
+                  <th><div>N/A</div></th>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    1. Townsville is a good place to raise a family.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-1" value="5"/></td>
+                  <td><input type="radio" name="q-1" value="4"/></td>
+                  <td><input type="radio" name="q-1" value="3"/></td>
+                  <td><input type="radio" name="q-1" value="2"/></td>
+                  <td><input type="radio" name="q-1" value="1"/></td>
+                  <td><input type="radio" name="q-1" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    2. I wish I could move away from Townsville as soon as possible.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-2" value="5"/></td>
+                  <td><input type="radio" name="q-2" value="4"/></td>
+                  <td><input type="radio" name="q-2" value="3"/></td>
+                  <td><input type="radio" name="q-2" value="2"/></td>
+                  <td><input type="radio" name="q-2" value="1"/></td>
+                  <td><input type="radio" name="q-2" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    3. All people should become vegans.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-3" value="5"/></td>
+                  <td><input type="radio" name="q-3" value="4"/></td>
+                  <td><input type="radio" name="q-3" value="3"/></td>
+                  <td><input type="radio" name="q-3" value="2"/></td>
+                  <td><input type="radio" name="q-3" value="1"/></td>
+                  <td><input type="radio" name="q-3" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    4. I approve of the mayor's leadership.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-4" value="5"/></td>
+                  <td><input type="radio" name="q-4" value="4"/></td>
+                  <td><input type="radio" name="q-4" value="3"/></td>
+                  <td><input type="radio" name="q-4" value="2"/></td>
+                  <td><input type="radio" name="q-4" value="1"/></td>
+                  <td><input type="radio" name="q-4" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    5. I plan to vote for the current mayor for a sixth term.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-5" value="5"/></td>
+                  <td><input type="radio" name="q-5" value="4"/></td>
+                  <td><input type="radio" name="q-5" value="3"/></td>
+                  <td><input type="radio" name="q-5" value="2"/></td>
+                  <td><input type="radio" name="q-5" value="1"/></td>
+                  <td><input type="radio" name="q-5" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    6. My neighborhood is beautiful.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-6" value="5"/></td>
+                  <td><input type="radio" name="q-6" value="4"/></td>
+                  <td><input type="radio" name="q-6" value="3"/></td>
+                  <td><input type="radio" name="q-6" value="2"/></td>
+                  <td><input type="radio" name="q-6" value="1"/></td>
+                  <td><input type="radio" name="q-6" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    7. I feel comfortable walking in Central Square at night.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-7" value="5"/></td>
+                  <td><input type="radio" name="q-7" value="4"/></td>
+                  <td><input type="radio" name="q-7" value="3"/></td>
+                  <td><input type="radio" name="q-7" value="2"/></td>
+                  <td><input type="radio" name="q-7" value="1"/></td>
+                  <td><input type="radio" name="q-7" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    8. The busses are always on time.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-8" value="5"/></td>
+                  <td><input type="radio" name="q-8" value="4"/></td>
+                  <td><input type="radio" name="q-8" value="3"/></td>
+                  <td><input type="radio" name="q-8" value="2"/></td>
+                  <td><input type="radio" name="q-8" value="1"/></td>
+                  <td><input type="radio" name="q-8" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    9. The community services should be expanded.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-9" value="5"/></td>
+                  <td><input type="radio" name="q-9" value="4"/></td>
+                  <td><input type="radio" name="q-9" value="3"/></td>
+                  <td><input type="radio" name="q-9" value="2"/></td>
+                  <td><input type="radio" name="q-9" value="1"/></td>
+                  <td><input type="radio" name="q-9" value="-1"/></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    10. Police should patrol more actively.
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="q-10" value="5"/></td>
+                  <td><input type="radio" name="q-10" value="4"/></td>
+                  <td><input type="radio" name="q-10" value="3"/></td>
+                  <td><input type="radio" name="q-10" value="2"/></td>
+                  <td><input type="radio" name="q-10" value="1"/></td>
+                  <td><input type="radio" name="q-10" value="-1"/></td>
+                </tr>
+              </table>
+
+            </fieldset>
+
+            <fieldset>
+              <legend>Feedback</legend>
+              <p id="additional-thoughts">It is important for us to gather relevant information on the well-being of our residents. Please let us know any additional thoughts or comments that may have come to your mind as you filled out the survey.</p>
+              <label for="comment">Comments on your experience as a resident of Townsville
+                <textarea id="comment" name="comment" rows="4" cols="30" placeholder="Write your comments here"></textarea>
+              </label>
+              <label for="feedback">Questions or suggestions for improving future surveys?
+                <textarea id="feedback" name="feedback" rows="2" cols="30" placeholder="Leave feedback here"></textarea>
+              </label>
+            </fieldset>
+            <fieldset>
+              <p id="check-over">Please check over your answers one last time before submitting. When you are satisfied, press the button below to submit the form and end the survey.</p>
+              <p id="thank-you">Thank you for taking the time to participate!</p>
+              <input type="submit" value="Submit" id="submit"/>
+            </fieldset>
+          </form>
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
