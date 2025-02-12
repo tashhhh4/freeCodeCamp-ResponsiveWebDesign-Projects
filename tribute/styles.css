@@ -1,0 +1,167 @@
+/* Typography */
+body {
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+p, figcaption, a {
+  font-size: 22px;
+  letter-spacing: .5px;
+  line-height: 30px;
+}
+
+h1 {
+  letter-spacing: 8px;
+  font-size: 5.2rem;
+  line-height: 94px;
+}
+@media screen and (max-width: 465px) {
+  h1 {
+    font-size: 3.0rem;
+    line-height: revert;
+  }
+}
+
+h3 {
+  font-size: 2.0rem;
+  letter-spacing: 4px;
+}
+
+h1, h3 {
+  font-family: "Barriecito", sans-serif;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+}
+
+/* Reset */
+* {
+  box-sizing:border-box;
+}
+body, figure, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Background */
+body {
+  background-color: black;
+  background: url("https://images.artoftash.com/fire-bg--tobias-rademacher.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Basic */
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 495px) {
+  main {
+    width: 100%;
+    padding: 4px;
+  }
+}
+
+/* Header Image */
+#img-div img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 10px solid black;
+  box-shadow: 0 0 80px 6px yellow;
+  margin: 20px 0 40px 0;
+}
+
+/* Section Styles */
+h3 {
+  margin-bottom: 20px;
+}
+
+strong {
+  color: yellow;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+.part strong {
+  color: inherit;
+}
+
+.black-shadow {
+  text-shadow:
+    0 0 0.2em black,
+    0 0 0.2em black,
+    0 0 0.2em black,
+    0 0 0.2em black,
+    0 0 0.5em black,
+    0 0 0.5em black;
+}
+.black-bg {
+  background-color: #000000ee;
+  box-shadow: 0 0 7px 5px black;
+}
+
+#img-caption {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.part {
+  padding: 16px;
+  margin: 140px 0;
+}
+
+h3 {
+  color: yellow;
+}
+
+.part p {
+  max-width: 80%;
+  margin: 0 auto;
+  min-height: 100px;
+  text-align: left;
+}
+
+.part img {
+  margin: 12px;
+  float: left;
+}
+
+.sources {
+  margin: 140px 0;
+  padding: 16px;
+}
+
+.sources li {
+  list-style-type: "🔥";
+  text-align: left;
+}
+
+.sources a {
+  font-size: .8rem;
+  text-align: left;
+}
+
+.further {
+  padding: 16px;
+}
